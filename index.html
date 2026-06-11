@@ -980,12 +980,12 @@
   </div>
 </div>
 
-<!-- Hero Section with Technology Moving Background -->
+<!-- Hero Section with Local Profile Picture -->
 <section id="home" class="hero">
   <canvas id="tech-canvas"></canvas>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <img class="hero-profile-img" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Clarissa M. Sotto">
+    <img class="hero-profile-img" src="profile(1).png" alt="Clarissa M. Sotto">
     <div class="hero-greeting">Hi, I'm Clarissa!</div>
     <h1><span class="gradient-text">Building digital experiences that make a difference.</span></h1>
     <div class="hero-buttons">
@@ -997,7 +997,7 @@
 </section>
 
 <main class="container">
-  <!-- About Section with Centered Title -->
+  <!-- About Section -->
   <section id="about" class="fade-up">
     <h2 class="section-title">About Me</h2>
     <div class="about-container">
@@ -1031,21 +1031,23 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects Section with Local Images -->
   <section id="projects" class="fade-up">
     <h2 class="section-title">Projects</h2>
     <div class="section-subtitle">A selection of projects that reflect my passion for creating efficient, reliable, and impactful solutions.</div>
     <div class="projects-grid">
+      <!-- Immersive Hospitality Intelligence Project -->
       <div class="project-card" onclick="showProjectDetails('IHI')">
-        <img class="project-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop" alt="Immersive Hospitality Intelligence">
+        <img class="project-img" src="aces1.png" alt="Immersive Hospitality Intelligence">
         <div class="project-info">
           <div class="project-title">Immersive Hospitality Intelligence: A SARIMA-Enhanced Simulation Framework for Strategic Hotel Management Training</div>
           <div class="project-description">A web application that simulates real-world hotel operations through predictive analytics and interactive learning experiences for Tourism and Hospitality Management students.</div>
           <span class="project-link">Click to view details →</span>
         </div>
       </div>
+      <!-- HomeBuddy Project -->
       <div class="project-card" onclick="showProjectDetails('HOMEBUDDY')">
-        <img class="project-img-portrait" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=800&fit=crop" alt="HomeBuddy - Mobile App Mockup">
+        <img class="project-img-portrait" src="h1.png" alt="HomeBuddy - Mobile App Mockup">
         <div class="project-info">
           <div class="project-title">HomeBuddy: An On-Demand Home Services Platform</div>
           <div class="project-description">A mobile application connecting homeowners with trusted service providers for household maintenance, repair, and home improvement services.</div>
@@ -1055,13 +1057,13 @@
     </div>
   </section>
 
-  <!-- Certificates Section -->
+  <!-- Certificates Section with Local Images -->
   <section id="certificates" class="fade-up">
     <h2 class="section-title">Certificates</h2>
     <div class="section-subtitle">A collection of my professional certifications and achievements.</div>
     <div class="certificates-grid">
       <div class="cert-card" onclick="showCertificateDetails('seminar')">
-        <img class="cert-img" src="https://picsum.photos/id/20/600/400" alt="Day 1 Advance Seminar Series Certificate">
+        <img class="cert-img" src="day1.png" alt="Day 1 Advance Seminar Series Certificate">
         <div class="cert-info">
           <div class="cert-title">Day 1 Advance Seminar Series</div>
           <div class="cert-issuer">Davao del Norte State College - Institute of Computing</div>
@@ -1071,7 +1073,7 @@
         </div>
       </div>
       <div class="cert-card" onclick="showCertificateDetails('day2')">
-        <img class="cert-img" src="https://picsum.photos/id/42/600/400" alt="Day 2 Advance Seminar Certificate">
+        <img class="cert-img" src="day2.png" alt="Day 2 Advance Seminar Certificate">
         <div class="cert-info">
           <div class="cert-title">Day 2 Advance Seminar Series</div>
           <div class="cert-issuer">Davao del Norte State College - Institute of Computing</div>
@@ -1081,7 +1083,7 @@
         </div>
       </div>
       <div class="cert-card" onclick="showCertificateDetails('deployment')">
-        <img class="cert-img" src="https://picsum.photos/id/0/600/400" alt="Deployment Certificate">
+        <img class="cert-img" src="deployment.jpg" alt="Deployment Certificate">
         <div class="cert-info">
           <div class="cert-title">Deployment Accomplishment Certificate</div>
           <div class="cert-issuer">ACES Polytechnic College Inc.</div>
@@ -1091,7 +1093,7 @@
         </div>
       </div>
       <div class="cert-card" onclick="showCertificateDetails('capstone')">
-        <img class="cert-img" src="https://picsum.photos/id/26/600/400" alt="Capstone Exhibit Certificate">
+        <img class="cert-img" src="exhibit.png" alt="Capstone Exhibit Certificate">
         <div class="cert-info">
           <div class="cert-title">BSIT and BSIS Capstone Project Exhibit 2026</div>
           <div class="cert-issuer">Reban Cliff A. Fajardo, MIT • Mark Van M. Buladaco, DBMIS</div>
@@ -1319,6 +1321,58 @@
     resizeCanvas();
     animateTechBackground();
 
+    // ==================== PROJECT DATA WITH LOCAL IMAGES ====================
+    const projectData = {
+      IHI: {
+        title: 'Immersive Hospitality Intelligence',
+        gallery: ['aces1.png', 'aces2.png', 'aces3.png', 'aces4.png'],
+        fields: [
+          { label: 'Platform', value: 'Web Application' },
+          { label: 'Technologies', value: 'React, Tailwind, REST API, Django, Firebase' },
+          { label: 'Role', value: 'Lead Developer & UI Designer' }
+        ],
+        description: 'Immersive Hospitality Intelligence is a web application that simulates real-world hotel operations through predictive analytics and interactive learning experiences. Designed for Tourism and Hospitality Management students, it enhances front-office management skills, strategic decision-making, and operational analysis.'
+      },
+      HOMEBUDDY: {
+        title: 'HomeBuddy: An On-Demand Home Services Platform',
+        gallery: ['h1.png', 'h2.png', 'h3.png', 'h4.png'],
+        fields: [
+          { label: 'Platform', value: 'Mobile App' },
+          { label: 'Technologies', value: 'Flutter, Node.js, MongoDB, Express' },
+          { label: 'Role', value: 'UI Designer' }
+        ],
+        description: 'HomeBuddy is a mobile application that connects homeowners with trusted service providers for household maintenance, repair, and home improvement services. Through secure booking, digital payments, and a review and rating system, the platform delivers a convenient and reliable experience.'
+      }
+    };
+
+    // Certificate Data with local images
+    const certificateData = {
+      seminar: { 
+        title: 'Day 1 Advance Seminar Series', 
+        gallery: ['day1.png'], 
+        fields: [{ label: 'Issuer', value: 'Davao del Norte State College - Institute of Computing' }, { label: 'Date', value: 'October 17, 2026' }], 
+        description: 'Certificate of Completion awarded for successfully completing Day 1 of the Advance Seminar Series for BSIT 4th Year Students with the topic "Journey from Science Practitioner to Information Technology Specialist" held on October 8, 2025, via Microsoft Teams (Virtual Session).' 
+      },
+      day2: { 
+        title: 'Day 2 Advance Seminar Series', 
+        gallery: ['day2.png'], 
+        fields: [{ label: 'Issuer', value: 'Davao del Norte State College - Institute of Computing' }, { label: 'Date', value: 'November 5, 2025' }], 
+        description: 'Certificate of Completion awarded for successfully completing Day 2 of the Advance Seminar Series for BSIT 4th Year Students with the topic "The Power of Color in Graphic Design: Theory, Psychology, and Practice" held on November 5, 2025, at Davao del Norte State College Gymnasium.' 
+      },
+      deployment: { 
+        title: 'Deployment Accomplishment Certificate', 
+        gallery: ['deployment.jpg'], 
+        fields: [{ label: 'Issuer', value: 'ACES Polytechnic College Inc.' }, { label: 'Date', value: 'April 13, 2026' }], 
+        description: 'Certificate of Completion awarded for successfully presenting, deploying, and implementing the ACES Hotel Management System capstone project at Davao del Norte State College from February 9, 2025 to March 20, 2026.' 
+      },
+      capstone: { 
+        title: 'BSIT/BSIS Capstone Project Exhibit 2026', 
+        gallery: ['exhibit.png'], 
+        fields: [{ label: 'Issuer', value: 'Davao del Norte State College' }, { label: 'Date', value: 'June 1, 2026' }], 
+        description: 'Certificate of Participation awarded for joining and presenting the capstone project during the BSIT and BSIS Capstone Project Exhibit 2026 at Davao del Norte State College.' 
+      }
+    };
+
     // ==================== REST OF THE SCRIPT ====================
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => { if (window.scrollY > 20) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled'); });
@@ -1422,28 +1476,6 @@
     modalClose.addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
-
-    const projectData = {
-      IHI: {
-        title: 'Immersive Hospitality Intelligence',
-        gallery: ['https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop', 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=600&h=400&fit=crop', 'https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=600&h=400&fit=crop', 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop'],
-        fields: [{ label: 'Platform', value: 'Web Application' }, { label: 'Technologies', value: 'React, Tailwind, REST API, Django, Firebase' }, { label: 'Role', value: 'Lead Developer & UI Designer' }],
-        description: 'Immersive Hospitality Intelligence is a web application that simulates real-world hotel operations through predictive analytics and interactive learning experiences. Designed for Tourism and Hospitality Management students, it enhances front-office management skills, strategic decision-making, and operational analysis.'
-      },
-      HOMEBUDDY: {
-        title: 'HomeBuddy: An On-Demand Home Services Platform',
-        gallery: ['https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=800&fit=crop', 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=800&fit=crop', 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=800&fit=crop', 'https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=600&h=800&fit=crop'],
-        fields: [{ label: 'Platform', value: 'Mobile App' }, { label: 'Technologies', value: 'Flutter, Node.js, MongoDB, Express' }, { label: 'Role', value: 'UI Designer' }],
-        description: 'HomeBuddy is a mobile application that connects homeowners with trusted service providers for household maintenance, repair, and home improvement services. Through secure booking, digital payments, and a review and rating system, the platform delivers a convenient and reliable experience.'
-      }
-    };
-
-    const certificateData = {
-      seminar: { title: 'Day 1 Advance Seminar Series', gallery: ['https://picsum.photos/id/20/800/600'], fields: [{ label: 'Issuer', value: 'Davao del Norte State College - Institute of Computing' }, { label: 'Date', value: 'October 17, 2026' }], description: 'Certificate of Completion awarded for successfully completing Day 1 of the Advance Seminar Series for BSIT 4th Year Students with the topic "Journey from Science Practitioner to Information Technology Specialist" held on October 8, 2025, via Microsoft Teams (Virtual Session).' },
-      day2: { title: 'Day 2 Advance Seminar Series', gallery: ['https://picsum.photos/id/42/800/600'], fields: [{ label: 'Issuer', value: 'Davao del Norte State College - Institute of Computing' }, { label: 'Date', value: 'November 5, 2025' }], description: 'Certificate of Completion awarded for successfully completing Day 2 of the Advance Seminar Series for BSIT 4th Year Students with the topic "The Power of Color in Graphic Design: Theory, Psychology, and Practice" held on November 5, 2025, at Davao del Norte State College Gymnasium.' },
-      deployment: { title: 'Deployment Accomplishment Certificate', gallery: ['https://picsum.photos/id/0/800/600'], fields: [{ label: 'Issuer', value: 'ACES Polytechnic College Inc.' }, { label: 'Date', value: 'April 13, 2026' }], description: 'Certificate of Completion awarded for successfully presenting, deploying, and implementing the ACES Hotel Management System capstone project at Davao del Norte State College from February 9, 2025 to March 20, 2026.' },
-      capstone: { title: 'BSIT/BSIS Capstone Project Exhibit 2026', gallery: ['https://picsum.photos/id/26/800/600'], fields: [{ label: 'Issuer', value: 'Davao del Norte State College' }, { label: 'Date', value: 'June 1, 2026' }], description: 'Certificate of Participation awarded for joining and presenting the capstone project during the BSIT and BSIS Capstone Project Exhibit 2026 at Davao del Norte State College.' }
-    };
 
     window.showProjectDetails = function(projectId) { const proj = projectData[projectId]; if (proj) showModal(proj.title, proj.gallery, proj.fields, proj.description, true); };
     window.showCertificateDetails = function(certKey) { const cert = certificateData[certKey]; if (cert) showModal(cert.title, cert.gallery, cert.fields, cert.description, false); };
